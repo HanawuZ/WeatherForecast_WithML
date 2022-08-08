@@ -1,7 +1,6 @@
 /* #########################  WiFi Initialization  #########################  */
 #include <WiFi.h>                                       		/* Library for WiFi   */
-#include <HTTPClient.h>                                 		/* Library for HTTP GET, POST and 
-																   PUT requests to a web server. 	*/
+#include <HTTPClient.h>                                 		/* Library for HTTP GET, POST and PUT requests to a web server. */
 #define WebHooksKey         "YOUR_WEBHOOKS_KEY"    				/* Define your WebHooks Key 		*/
 #define WebHooksEventName1  "YOUR_WEBHOOKS_EVENT_NAME"         	/* Define your WebHooks Event name 	*/
 #define WebHooksEventName2  "YOUR_WEBHOOKS_EVENT_NAME"
@@ -21,8 +20,8 @@ DHTesp dht;                             /* Initialize DHT-11 module object      
 /* #########################  TM1639 Initialization  #########################  */
 #include <TM1638plus.h>                 /* Includes Library to control TM1638 7-segments modules  */
 #define Brd_STB 15                      /* strobe = GPIO connected to strobe line of module */
-#define Brd_CLK 4                       /* clock = GPIO connected to clock line of module */
-#define Brd_DIO 5                       /* data = GPIO connected to data line of module   */
+#define Brd_CLK 4                       /* clock = GPIO connected to clock line of module   */
+#define Brd_DIO 5                       /* data = GPIO connected to data line of module     */
 #define high_freq true
 TM1638plus tm(Brd_STB, Brd_CLK , Brd_DIO, high_freq);     /* Initialize TM1638 7-segments modules object  */
 
@@ -30,8 +29,8 @@ TM1638plus tm(Brd_STB, Brd_CLK , Brd_DIO, high_freq);     /* Initialize TM1638 7
 #define DIN 13                          /* This pin is connected to DataIn(DIN) */
 #define CS 12                           /* this pin is connected to LOAD(CS)    */ 
 #define CLK 14                          /* this pin is connected to CLK         */
-#include "LedController.hpp"            /* Includes Library for controlling MAX7219 7-segments  */
-LedController lc;                       /* Initialize objecgt for controlling MAX7219 7-segments */
+#include "LedController.hpp"            /* Includes Library for controlling MAX7219 7-segments      */
+LedController lc;                       /* Initialize objecgt for controlling MAX7219 7-segments    */
 
 #define delaytime 250                               /* Defines delay time, its value is 250 milliseconds  */   
 TaskHandle_t SendSensorValuesTask = NULL;           /* Initialize Task variable for sending data value    */
