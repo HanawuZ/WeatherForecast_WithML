@@ -30,7 +30,7 @@ o These statements will initialize dataset from reading csv file
 -------------------------------------------------------------------   """ 
 
 # Read csv file using method read_csv() of pandas library
-dataset = pd.read_csv(r"C:\Users\ender\Desktop\Python\Machine Learning\ML_DHT11&BMP280\DHT11&BMP280_values.csv");
+dataset = pd.read_csv("[Your CSV file location]");
 
 # Initialize weather data values (Humidity, Temperature(C), Pressure(Pa), Altitude)
 WeatherValue = dataset[["DHT-11 Humidity" ,"BMP-280 Temp" , 
